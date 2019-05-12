@@ -14,6 +14,7 @@ class CreateBookPictureTable extends Migration
     public function up()
     {
         Schema::create('book_picture', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->integer('book_id');
             $table->string('link');
         });

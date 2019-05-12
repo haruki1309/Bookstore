@@ -20,10 +20,6 @@ body{
 	font-weight: 400;
 }
 
-.nav .menu ul li span{
-	margin-left: 20px;
-}
-
 .noti-wrapper{
 	margin: 40px;
 	height: auto;
@@ -38,7 +34,6 @@ body{
 
 .noti-wrapper .notifications{
 	background: #8DC38F;
-	width: 100%;
 	height: auto;
 	padding: 20px 10px 20px 40px;
 }

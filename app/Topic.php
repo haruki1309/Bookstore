@@ -10,6 +10,6 @@ class Topic extends Model
     public $timestamps = false;
 
     public function Book(){
-    	return $this->hasMany('App\Book');
+    	return $this->belongsToMany('App\Book');
     }
 }

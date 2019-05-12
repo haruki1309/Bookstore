@@ -23,6 +23,24 @@ body{
 	color: #333;
 }
 
+.noti-wrapper{
+	margin: 40px;
+	height: auto;
+}
+
+.noti-wrapper .errors{
+	background: #FF9494;
+	height: auto;
+	padding: 20px 10px 20px 40px;
+	margin: 40px 0;
+}
+
+.noti-wrapper .notifications{
+	background: #8DC38F;
+	height: auto;
+	padding: 20px 10px 20px 40px;
+}
+
 .content .content-wrap{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -72,7 +90,7 @@ body{
 	background: #FFFFFF;
 	margin: 0px 20px 0 40px;
 	height: auto;
-	min-height: 80vh;
+	min-height: 70vh;
 	box-shadow: 7px 5px 6px -4px #E3E3E3;
 }
 
@@ -101,6 +119,10 @@ body{
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 0;
+}
+
+.content .author-table .author-list td a{
+	color: #7F15E9;
 }
 
 .content .content-wrap .add-author{

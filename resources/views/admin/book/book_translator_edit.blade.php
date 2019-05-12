@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Admin | Book Age</title>
+	<title>Admin | Book Translator</title>
 	<link rel="stylesheet" type="text/css" href="{{asset('css/Admin/book_author.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/Admin/admin_menu.css')}}">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
@@ -31,14 +31,14 @@
 						<i class="fas fa-book-open"></i><span>SÁCH</span>
 					</a>
 					<ul class="sub-list">
-						<li class="sub-item"><a href="author"><span>TÁC GIẢ</span></a></li>
-						<li class="sub-item"><a href="translator"><span>DỊCH GIẢ</span></a></li>
-						<li class="sub-item"><a href="nph"><span>NPH</span></a></li>
-						<li class="sub-item"><a href="nxb"><span>NXB</span></a></li>
-						<li class="sub-item"><a href="language"><span>NGÔN NGỮ</span></a></li>
-						<li class="sub-item"><a href="age"><span>ĐỘ TUỔI</span></a></li>
-						<li class="sub-item"><a href="topic"><span>CHỦ ĐỀ</span></a></li>
-						<li class="sub-item"><a href="category"><span>THỂ LOẠI</span></a></li>
+						<li class="sub-item"><a href="../author"><span>TÁC GIẢ</span></a></li>
+						<li class="sub-item"><a href="../translator"><span>DỊCH GIẢ</span></a></li>
+						<li class="sub-item"><a href="../nph"><span>NPH</span></a></li>
+						<li class="sub-item"><a href="../nxb"><span>NXB</span></a></li>
+						<li class="sub-item"><a href="../language"><span>NGÔN NGỮ</span></a></li>
+						<li class="sub-item"><a href="../age"><span>ĐỘ TUỔI</span></a></li>
+						<li class="sub-item"><a href="../topic"><span>CHỦ ĐỀ</span></a></li>
+						<li class="sub-item"><a href="../category"><span>THỂ LOẠI</span></a></li>
 
 					</ul>
 				</li>
@@ -62,68 +62,68 @@
 		</div>
 	</div>
 	<div class="content">
-		<div class="title">ĐỘ TUỔI</div>
+		<div class="title">DỊCH GIẢ</div>
 		<div class="tool-bar">
-			<form action="age-search" method="post" class="search-form" role="search">
+			<form action="../translator-search" method="post" class="search-form" role="search">
 				<input type="hidden" name="_token" value="{{csrf_token()}}";>
 				<input type="text" name="searchkey" placeholder="Nhập từ khóa...">
 				<button type="submit" class="search-btn">Tìm Kiếm</button>
 			</form>
 		</div>
 		<div class="noti-wrapper">
-            @if(count($errors) > 0)
-                <div class="errors">
-                    <ul>
-                        @foreach($errors->all() as $err)
-                            <li>{{$err}}</li><br>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
+	        @if(count($errors) > 0)
+	            <div class="errors">
+	                <ul>
+	                    @foreach($errors->all() as $err)
+	                        <li>{{$err}}</li><br>
+	                    @endforeach
+	                </ul>
+	            </div>
+	        @endif
 
-            @if(session('message'))
-                <div class="notifications">
-                    {{session('message')}}<br>
-                </div>
-            @endif
-        </div>
+	        @if(session('message'))
+	            <div class="notifications">
+	                {{session('message')}}<br>
+	            </div>
+	        @endif
+	    </div>
 		<div class="content-wrap">
 			<div class="author">
 				<div class="author-table">
 					<table class="author-list">
 						<tr>
 							<th style="width: 60px;">ID</th>
-							<th style="width: 300px;">ĐỘ TUỔI</th>
+							<th style="width: 300px;">DỊCH GIẢ</th>
 							<th style="width: 50px;"></th>
 							<th style="width: 50px;"></th>
 						</tr>
-						@for($i = 0; $i < count($allAge); $i++)
+						@for($i = 0; $i < count($allTranslator); $i++)
 						<tr>
 							<td>{{$i + 1}}</td>
-							<td>{{$allAge[$i]->name}}</td>
+							<td>{{$allTranslator[$i]->name}}</td>
 							<td>
-								<a href="age/{{$allAge[$i]->id}}">
+								<a href="{{$allTranslator[$i]->id}}">
 									<i class="fas fa-edit"></i>
 								</a>
 							</td>
 							<td>
-								@if(count($allAge[$i]->Book) == 0)
-								<a href="age/del/{{$allAge[$i]->id}}">
+								@if(count($allTranslator[$i]->Book) == 0)
+								<a href="del/{{$allTranslator[$i]->id}}">
 									<i class="far fa-trash-alt"></i>
 								</a>
 								@endif
 							</td>
 						</tr>
 						@endfor
-						
-					</table>						
+					</table>				
 				</div>
 			</div>
 			<div class="add-author">
-				<span>Độ tuổi</span>
-				<form action="age" method="post" enctype="multipart/form-data">
+				<span>Dịch giả</span>
+				<form method="post" enctype="multipart/form-data">
 					<input type="hidden" name="_token" value="{{csrf_token()}}";>
-					<input type="text" name="value" placeholder="Nhập độ tuổi">
+					<input type="text" name="value" placeholder="Nhập tên dịch giả"
+					value="{{$edit_translator->name}}">	
 					<button type="submit" class="save">Lưu</button>
 				</form>
 			</div>

@@ -27,18 +27,18 @@
 				</li>
 
 				<li class="parent-item">
-					<a href="../books" class="btn" id="li-highlight">
+					<a href="../../books" class="btn" id="li-highlight">
 						<i class="fas fa-book-open"></i><span>SÁCH</span>
 					</a>
 					<ul class="sub-list">
-						<li class="sub-item"><a href="author"><span>TÁC GIẢ</span></a></li>
-						<li class="sub-item"><a href="translator"><span>DỊCH GIẢ</span></a></li>
-						<li class="sub-item"><a href="nph"><span>NPH</span></a></li>
-						<li class="sub-item"><a href="nxb"><span>NXB</span></a></li>
-						<li class="sub-item"><a href="language"><span>NGÔN NGỮ</span></a></li>
-						<li class="sub-item"><a href="age"><span>ĐỘ TUỔI</span></a></li>
-						<li class="sub-item"><a href="topic"><span>CHỦ ĐỀ</span></a></li>
-						<li class="sub-item"><a href="category"><span>THỂ LOẠI</span></a></li>
+						<li class="sub-item"><a href="../author"><span>TÁC GIẢ</span></a></li>
+						<li class="sub-item"><a href="../translator"><span>DỊCH GIẢ</span></a></li>
+						<li class="sub-item"><a href="../nph"><span>NPH</span></a></li>
+						<li class="sub-item"><a href="../nxb"><span>NXB</span></a></li>
+						<li class="sub-item"><a href="../language"><span>NGÔN NGỮ</span></a></li>
+						<li class="sub-item"><a href="../age"><span>ĐỘ TUỔI</span></a></li>
+						<li class="sub-item"><a href="../topic"><span>CHỦ ĐỀ</span></a></li>
+						<li class="sub-item"><a href="../category"><span>THỂ LOẠI</span></a></li>
 
 					</ul>
 				</li>
@@ -64,7 +64,7 @@
 	<div class="content">
 		<div class="title">ĐỘ TUỔI</div>
 		<div class="tool-bar">
-			<form action="age-search" method="post" class="search-form" role="search">
+			<form action="../age-search" method="post" class="search-form" role="search">
 				<input type="hidden" name="_token" value="{{csrf_token()}}";>
 				<input type="text" name="searchkey" placeholder="Nhập từ khóa...">
 				<button type="submit" class="search-btn">Tìm Kiếm</button>
@@ -102,13 +102,13 @@
 							<td>{{$i + 1}}</td>
 							<td>{{$allAge[$i]->name}}</td>
 							<td>
-								<a href="age/{{$allAge[$i]->id}}">
+								<a href="{{$allAge[$i]->id}}">
 									<i class="fas fa-edit"></i>
 								</a>
 							</td>
 							<td>
 								@if(count($allAge[$i]->Book) == 0)
-								<a href="age/del/{{$allAge[$i]->id}}">
+								<a href="del/{{$allAge[$i]->id}}">
 									<i class="far fa-trash-alt"></i>
 								</a>
 								@endif
@@ -116,14 +116,15 @@
 						</tr>
 						@endfor
 						
-					</table>						
+					</table>				
 				</div>
 			</div>
 			<div class="add-author">
 				<span>Độ tuổi</span>
-				<form action="age" method="post" enctype="multipart/form-data">
+				<form method="post" enctype="multipart/form-data">
 					<input type="hidden" name="_token" value="{{csrf_token()}}";>
-					<input type="text" name="value" placeholder="Nhập độ tuổi">
+					<input type="text" name="value" placeholder="Nhập độ tuổi" 
+					value="{{$edit_age->name}}">
 					<button type="submit" class="save">Lưu</button>
 				</form>
 			</div>

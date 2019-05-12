@@ -33,7 +33,7 @@
 						<i class="fas fa-book-open"></i><span>SÁCH</span>
 					</a>
 					<ul class="sub-list">
-						<li class="sub-item"><a href=""><span>TÁC GIẢ</span></a></li>
+						<li class="sub-item"><a href="../author"><span>TÁC GIẢ</span></a></li>
 						<li class="sub-item"><a href=""><span>DỊCH GIẢ</span></a></li>
 						<li class="sub-item"><a href=""><span>NPH</span></a></li>
 						<li class="sub-item"><a href=""><span>NXB</span></a></li>
@@ -249,11 +249,9 @@
 									</button>
 								</div>
 							</div>
-							@for($i = 0; $i < count($book->Picture); $i++)
 							<div class="control" id="{{$i + 1}}">
-								<input type="file" name="image[]" class="input" value="{{$book->Picture[$i]->link}}">
+								<input type="file" name="image[]" class="input">
 							</div>
-							@endfor
 						</div>
 					</dir>
 					<dir class="col">

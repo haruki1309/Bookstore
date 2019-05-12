@@ -64,10 +64,10 @@
 	<div class="content">
 		<div class="title">QUẢN LÝ SÁCH</div>
 		<div class="tool-bar">
-			<form action="search" method="post" class="search-form" role="search">
+			<form action="book-search" method="post" class="search-form" role="search">
 				<input type="hidden" name="_token" value="{{csrf_token()}}";>
 
-				<input type="text" name="search-key" placeholder="Nhập từ khóa...">
+				<input type="text" name="searchkey" placeholder="Nhập từ khóa...">
 				<button type="submit" class="search-btn">Tìm Kiếm</button>
 			</form>
 			<a href="books/new"><div class="add-btn">Thêm Sách</div></a>
@@ -82,7 +82,6 @@
 					<th style="width: 100px;">GIẢM GIÁ</th>
 					<th style="width: 100px;">ĐÃ ĐẶT</th>
 					<th style="width: 100px;">CÒN LẠI</th>
-					<th style="width: 50px;"></th>
 					<th style="width: 50px;"></th>
 				</tr>
 
@@ -101,11 +100,6 @@
 						<td>
 							<a href="books/edit/{{$book->id}}">
 								<i class="fas fa-edit"></i>
-							</a>
-						</td>
-						<td>
-							<a href="">
-								<i class="far fa-trash-alt"></i>
 							</a>
 						</td>
 					</tr>

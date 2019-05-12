@@ -201,7 +201,7 @@ Marguerite là người có tâm hồn và cá tính; nàng có lòng vị tha, 
 'The Little Prince English edition 2015 translated from original title Le Petit Prince. This book offers extra Augmented Reality content with music, games and 3D images. Which allows you to interact with the prince who came from a little asteroid, take pictures with him, remove the baobabs from the asteroid and much',
 231 , 13, 241000, 39);
 
-insert into book_picture 
+insert into book_picture (book_id, link)
 values
 (1, 'toi_thay_hoa_vang.jpg'),
 (2, 'ChienThangTroChoiCuocSong.jpg'),
