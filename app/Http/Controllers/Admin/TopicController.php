@@ -16,9 +16,10 @@ class TopicController extends Controller
 
     public function postIndex(Request $request){
         $this->validate($request, [
-            'value'=>'required'
+            'value'=>'required|unique:topic,name'
         ], [
-            'value.required'=>'Bạn chưa nhập chủ đề'
+            'value.required'=>'Bạn chưa nhập chủ đề',
+            'value.required'=>'Chủ đề đã tồn tại'
         ]);
 
     	$topic = new Topic;
@@ -35,9 +36,10 @@ class TopicController extends Controller
 
     public function postEdit(Request $request, $id){
         $this->validate($request, [
-            'value'=>'required'
+            'value'=>'required|unique:topic,name'
         ], [
-            'value.required'=>'Bạn chưa nhập chủ đề'
+            'value.required'=>'Bạn chưa nhập chủ đề',
+            'value.required'=>'Chủ đề đã tồn tại'
         ]);
 
     	$topic = Topic::find($id);

@@ -16,9 +16,10 @@ class CategoryController extends Controller
 
     public function postIndex(Request $request){
         $this->validate($request, [
-            'value'=>'required'
+            'value'=>'required|unique:category,name'
         ], [
-            'value.required'=>'Bạn chưa nhập thể loại'
+            'value.required'=>'Bạn chưa nhập thể loại',
+            'value.unique'=>'Thể loại đã tồn tại'
         ]);
 
     	$category = new Category;
@@ -35,9 +36,10 @@ class CategoryController extends Controller
 
     public function postEdit(Request $request, $id){
         $this->validate($request, [
-            'value'=>'required'
+            'value'=>'required|unique:category,name'
         ], [
-            'value.required'=>'Bạn chưa nhập thể loại'
+            'value.required'=>'Bạn chưa nhập thể loại',
+            'value.unique'=>'Thể loại đã tồn tại'
         ]);
 
     	$category = Category::find($id);

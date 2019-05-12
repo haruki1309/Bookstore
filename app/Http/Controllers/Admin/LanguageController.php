@@ -16,9 +16,10 @@ class LanguageController extends Controller
 
     public function postIndex(Request $request){
         $this->validate($request, [
-            'value'=>'required'
+            'value'=>'required|unique:language,name'
         ], [
-            'value.required'=>'Bạn chưa nhập ngôn ngữ'
+            'value.required'=>'Bạn chưa nhập ngôn ngữ',
+            'value.unique'=>'Ngôn ngữ đã tồn tại'
         ]);
 
     	$language = new Language;
@@ -35,9 +36,10 @@ class LanguageController extends Controller
 
     public function postEdit(Request $request, $id){
         $this->validate($request, [
-            'value'=>'required'
+            'value'=>'required|unique:language,name'
         ], [
-            'value.required'=>'Bạn chưa nhập ngôn ngữ'
+            'value.required'=>'Bạn chưa nhập ngôn ngữ',
+            'value.unique'=>'Ngôn ngữ đã tồn tại'
         ]);
 
     	$language = Language::find($id);

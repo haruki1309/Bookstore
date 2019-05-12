@@ -16,9 +16,10 @@ class NXBController extends Controller
 
     public function postIndex(Request $request){
         $this->validate($request, [
-            'value'=>'required'
+            'value'=>'required|unique:publishing_company,name'
         ], [
-            'value.required'=>'Bạn chưa nhập tên nhà xuất bản'
+            'value.required'=>'Bạn chưa nhập tên nhà xuất bản',
+            'value.unique'=>'Nhà xuất bản đã tồn tại'
         ]);
 
     	$nxb = new PublishingCompany;
@@ -35,9 +36,10 @@ class NXBController extends Controller
 
     public function postEdit(Request $request, $id){
         $this->validate($request, [
-            'value'=>'required'
+            'value'=>'required|unique:publishing_company,name'
         ], [
-            'value.required'=>'Bạn chưa nhập tên nhà xuất bản'
+            'value.required'=>'Bạn chưa nhập tên nhà xuất bản',
+            'value.unique'=>'Nhà xuất bản đã tồn tại'
         ]);
 
     	$nxb = PublishingCompany::find($id);

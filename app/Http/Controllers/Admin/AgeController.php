@@ -16,9 +16,10 @@ class AgeController extends Controller
 
     public function postIndex(Request $request){
         $this->validate($request, [
-            'value'=>'required'
+            'value'=>'required|unique:age,name'
         ], [
-            'value.required'=>'Bạn chưa nhập độ tuổi'
+            'value.required'=>'Bạn chưa nhập độ tuổi',
+            'value.unique'=>'Độ tuổi đã tồn tại'
         ]);
 
     	$age = new Age;
@@ -35,9 +36,10 @@ class AgeController extends Controller
 
     public function postEdit(Request $request, $id){
         $this->validate($request, [
-            'value'=>'required'
+            'value'=>'required|unique:age,name'
         ], [
-            'value.required'=>'Bạn chưa nhập độ tuổi'
+            'value.required'=>'Bạn chưa nhập độ tuổi',
+            'value.unique'=>'Độ tuổi đã tồn tại'
         ]);
 
     	$age = Age::find($id);

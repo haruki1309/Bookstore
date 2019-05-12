@@ -16,9 +16,10 @@ class NPHController extends Controller
 
     public function postIndex(Request $request){
         $this->validate($request, [
-            'value'=>'required'
+            'value'=>'required|unique:publisher,name'
         ], [
-            'value.required'=>'Bạn chưa nhập tên nhà phát hành'
+            'value.required'=>'Bạn chưa nhập tên nhà phát hành',
+            'value.unique'=>'Nhà phát hành đã tồn tại'
         ]);
 
     	$nph = new Publisher;
@@ -35,9 +36,10 @@ class NPHController extends Controller
 
     public function postEdit(Request $request, $id){
         $this->validate($request, [
-            'value'=>'required'
+            'value'=>'required|unique:publisher,name'
         ], [
-            'value.required'=>'Bạn chưa nhập tên nhà phát hành'
+            'value.required'=>'Bạn chưa nhập tên nhà phát hành',
+            'value.unique'=>'Nhà phát hành đã tồn tại'
         ]);
 
     	$nph = Publisher::find($id);

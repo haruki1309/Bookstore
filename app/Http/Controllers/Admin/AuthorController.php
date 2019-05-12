@@ -17,9 +17,10 @@ class AuthorController extends Controller
 
     public function postIndex(Request $request){
         $this->validate($request, [
-            'value'=>'required'
+            'value'=>'required|unique:author,name'
         ], [
-            'value.required'=>'Bạn chưa nhập tên tác giả'
+            'value.required'=>'Bạn chưa nhập tên tác giả',
+            'value.unique'=>'Tác giả đã tồn tại'
         ]);
 
     	$author = new Author;
@@ -36,9 +37,10 @@ class AuthorController extends Controller
 
     public function postEdit(Request $request, $id){
         $this->validate($request, [
-            'value'=>'required'
+            'value'=>'required|unique:author,name'
         ], [
-            'value.required'=>'Bạn chưa nhập tên tác giả'
+            'value.required'=>'Bạn chưa nhập tên tác giả',
+            'value.unique'=>'Tác giả đã tồn tại'
         ]);
 
     	$author = Author::find($id);

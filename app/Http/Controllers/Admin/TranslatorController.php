@@ -16,9 +16,10 @@ class TranslatorController extends Controller
 
     public function postIndex(Request $request){
         $this->validate($request, [
-            'value'=>'required'
+            'value'=>'required|unique:translator,name'
         ], [
-            'value.required'=>'Bạn chưa nhập tên dịch giả'
+            'value.required'=>'Bạn chưa nhập tên dịch giả',
+            'value.unique'=>'Dịch giả đã tồn tại'
         ]);
 
     	$translator = new Translator;
@@ -35,9 +36,10 @@ class TranslatorController extends Controller
 
     public function postEdit(Request $request, $id){
         $this->validate($request, [
-            'value'=>'required'
+            'value'=>'required|unique:translator,name'
         ], [
-            'value.required'=>'Bạn chưa nhập tên dịch giả'
+            'value.required'=>'Bạn chưa nhập tên dịch giả',
+            'value.unique'=>'Dịch giả đã tồn tại'
         ]);
 
     	$translator = Translator::find($id);
