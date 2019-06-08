@@ -1,6 +1,7 @@
 <?php
-
+use Illuminate\Http\Request;
 use App\Book;
+use App\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,13 +12,11 @@ use App\Book;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('admin/login', 'Admin\AdminLoginController@getIndex');
+Route::post('admin/login', 'Admin\AdminLoginController@postIndex');
 
-Route::get('/', function () {
-	
-});
-
-
-Route::group(['prefix'=>'admin'], function(){
+Route::group(['prefix'=>'admin', 'middleware'=>'adminLogin'], function(){
+	Route::get('logout', 'Admin\AdminLoginController@logout');
 	//book route ------------------------------------------------------
 
 	Route::post('book-search', 'Admin\BookController@search');
@@ -162,5 +161,88 @@ Route::group(['prefix'=>'admin'], function(){
 	Route::get('books/category', 'Admin\CategoryController@getIndex');
 
 	Route::post('books/category', 'Admin\CategoryController@postIndex');
+
+	//user route
+	Route::get('users', 'Admin\UsersController@getUser');
+	//order route
+	Route::get('orders', 'Admin\OrderController@getOrder');
+
+	Route::get('orders/{id}', 'Admin\OrderController@getOrderDetail');
+
+	Route::get('orders/{id}/shipping', 'Admin\OrderController@postShipping');
+
+	Route::get('orders/{id}/succeed', 'Admin\OrderController@postSucceed');
+
+	//comment managemant route
+	Route::get('comments', 'Admin\CommentController@getCommentList');
+	Route::get('comments/accept/{id}', 'Admin\CommentController@acceptComment');
+	Route::get('comments/delete/{id}', 'Admin\CommentController@deleteComment');
+
+	//question route
+	Route::get('questions', 'Admin\QuestionController@getQuestionList');
+	Route::post('questions/{id}/answer', 'Admin\QuestionController@postAnswer');
+	Route::get('questions/{id}/delete', 'Admin\QuestionController@deleteQuestion');
 });
 
+
+Route::post('/result', 'Client\SearchController@postSearch');
+Route::get('/result', 'Client\SearchController@getSearch');
+
+Route::get('/sale-off', 'Client\SearchController@getSaleOff');
+
+Route::get('/homepage', 'Client\HomepageController@getIndex');
+
+Route::get('/book/{id}', 'Client\BookController@getIndex');
+
+Route::post('/book/{id}/send-quest', 'Client\BookController@postQuestion');
+
+Route::post('/book/{id}/send-comment', 'Client\BookController@postComment');
+
+Route::post('/login', 'Client\LoginController@postLogin');
+
+Route::post('/signin', 'Client\SigninController@postSignin');
+
+Route::get('/logout', 'Client\LoginController@logout');
+
+Route::post('/checkEmail', 'Client\SigninController@checkEmailExisted');
+
+Route::post('/checkPhone', 'Client\SigninController@checkPhoneExisted');
+
+//cart route
+Route::post('add-to-cart/{id}', 'Client\CartController@addtocart');
+
+Route::post('checkout/cart/update', 'Client\CartController@update')->middleware('userLogin');
+
+Route::post('checkout/cart/delete', 'Client\CartController@delete')->middleware('userLogin');
+
+Route::get('checkout/cart', 'Client\CartController@getCart');
+
+//end cart route
+
+Route::get('checkout/shipping-info', 'Client\ShippingAddressController@getView')->middleware('userLogin');
+
+Route::post('checkout/save-address', 'Client\ShippingAddressController@saveAddress')->middleware('userLogin');
+
+Route::get('checkout/delete-address/{id}', 'Client\ShippingAddressController@deleteAddress')->middleware('userLogin');
+
+Route::get('checkout/delivery-info/{id}', 'Client\DeliveryController@getDelivery')->middleware('userLogin');
+
+Route::post('checkout/delivery-info/{id}', 'Client\DeliveryController@postOrder')->middleware('userLogin');
+
+Route::group(['prefix'=>'account', 'middleware'=>'userLogin'], function(){
+	Route::get('/order-history', 'Client\UserBoardController@getOrder');
+	Route::get('/edit', 'Client\UserBoardController@getAccountEdit');
+	Route::post('/edit', 'Client\UserBoardController@postAccountEdit');
+	Route::get('/purcharsed-book', 'Client\UserBoardController@getPurcharsedBook');
+});
+
+Route::get('/test', function(){
+	Cart::destroy();
+	//Cart::restore('1');
+	//dd(User::get());
+	//$book = Cart::content()->where('id', 7)->first();
+	dd(Cart::content());
+	//Cart::store(1);
+});
+
+Route::get('{category}/{id}', 'Client\SearchController@getCategory');

@@ -1,0 +1,494 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', serif;
+    font-weight: 300;     
+}
+
+header
+{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;    
+    width: 100%;
+}
+
+#account
+{
+    background: #1D71AB;
+    height: 30px; 
+    color: #fff;
+}
+
+ul
+{
+    list-style: none;
+}
+
+h1, h2
+{
+    color: rgb(65, 64, 64);
+}
+
+a
+{    
+    text-decoration: none;
+    color: rgb(65, 64, 64);
+}
+
+#account ul
+{
+    display: inline-block;
+    line-height: 30px;  
+    margin-left: 10px;
+}
+
+header #account ul li
+{
+    margin-right: 20px;
+    color: #fff;
+    font-size: 13px;
+    float: left;
+}
+
+header #account ul li a{
+    color: #fff;
+}
+
+header #account:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header #account #accountInfo
+{
+    float: right;
+    line-height: 30px;
+    font-size: 13px;
+    cursor: default;
+}
+
+header #account #accountInfo .accountBtn{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    width: 230px;
+    height: 30px;
+}
+
+header #account #accountInfo .accountBtn:hover{
+    cursor: pointer;
+}
+
+header #account #accountInfo .accountBtn .acc-name{
+    text-align: right;
+    margin-right: 10px;
+}
+
+header #account #accountInfo .accountBtn #accountIcon
+{       
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+header #mainNav
+{
+    height: 60px;
+    box-shadow: 0 7px 9px -6px gray;
+    background: #189EFF;
+}
+
+header #mainNav:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header #mainNav #logo
+{
+    margin-left: 50px;
+    margin-right: 50px;  
+    float: left;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+
+header #mainNav #cart a
+{
+    float: right;
+    height: 60px;
+    width: 70px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+header #mainNav #cartAmount
+{
+    color: white;
+    background: red;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+header #mainNav #cart i
+{
+    font-size: 24px;
+    display: inline-block;
+    color: #fff;
+    margin: auto;
+}
+
+header #mainNav nav
+{
+    float: right;
+}
+
+header #mainNav nav:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+header #mainNav nav ul li
+{
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 60px;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+header #mainNav nav ul li:hover
+{
+    color: #043252;
+}
+
+header #mainNav #search
+{
+    float: left;
+    text-align: center;
+    background: #fff;
+    width: 350px;
+    height: 34px;
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+    margin: 12px auto;
+    border: 1px solid #B5E0FF;
+    border-radius: 20px;
+}
+header #mainNav #search input[type=search]
+{
+    height: 34px;
+    display: inline-block;
+    margin: auto 0;
+    width: 90%;
+    outline: none;
+    border: 0;
+    font-size: 14px;
+}
+
+header #mainNav #search i
+{
+    margin: auto;
+    margin-right: 10px;
+    color: #043252;
+    width: 20px;
+}
+
+header #category-li{
+    background: #fff;
+    z-index: 900;
+    height: 0;
+    overflow: hidden;
+    padding: 0 40px;
+    box-shadow: 0 4px 10px -6px gray;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+header #category-li .col{;
+    width: 98%;
+    padding: 20px 0;
+}
+
+header #category-li .col .category-name{
+    display: block;
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: default;
+    width: 140px;
+}
+
+header #category-li .col .list-name{
+    display: block;
+    margin-bottom: 13px;
+    font-size: 13px;
+    width: 140px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.bg-popup{
+    background: rgba(0, 0, 0, 0.85);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1001;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+.bg-popup .form-wrap{
+    width: 480px;
+    height: auto;
+    padding: 60px 0;
+    background: #fff;
+    border-radius: 3px; 
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.bg-popup .form-wrap .form-name{
+    font-size: 30px;
+    margin-bottom: 40px;
+    cursor: default;
+}
+
+.bg-popup .form-wrap #form-btn-exit{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    color: #222;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.bg-popup .form-wrap #form-btn-exit:hover{
+    cursor: pointer;
+    color: #1D71AB;
+}
+
+.bg-popup .form-wrap form .error{
+    display: block;
+    width: 300px;
+    height: 30px;
+    padding: 0 20px;
+    font-size: 14px;
+    line-height: 40px;
+    color: #FF0000;
+}
+
+.bg-popup .form-wrap form .input-session{
+    height: 80px;
+}
+
+.bg-popup .form-wrap form input{
+    display: block;
+    width: 300px;
+    height: 30px;
+    padding: 0 20px;
+}
+
+.bg-popup .form-wrap form input:focus{
+    outline: 1px solid #189EFF;
+}
+
+.bg-popup .form-wrap form button{
+    display: inline-block;
+    width: 160px;
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 6px;
+    outline: none;
+}
+
+.bg-popup .form-wrap form button:hover{
+    opacity: 0.88;
+    transition: .2s;
+}
+
+.bg-popup .form-wrap form .btn-login{
+    margin-right: 20px;
+    background: #1D71AB;
+}
+
+.bg-popup .form-wrap form .btn-signin{
+    background: #189EFF;
+}
+
+.login-panel{
+    width: 230px;
+    height: auto;
+    position: fixed;
+    z-index: 1000;
+    top: 30px;
+    right: 0;
+    background: #fff;
+    box-shadow: 1px 1px 8px 0px #A8A8A8;
+    overflow: hidden;
+    display: none;
+    opacity: 0;
+    padding: 20px 0;
+}
+
+.login-panel .btn{
+    height: 40px;
+    width: 180px;
+    border-radius: 4px;
+    color: #fff;
+    border: none;
+    outline: none;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 10px;
+}
+
+.login-panel .btn:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.login-panel #btn-login{
+    background: #189EFF;
+}
+
+.login-panel #btn-signin,
+.login-panel #btn-logout{
+    background: #FFC120;
+}
+
+.login-panel .list-item{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+}
+
+.login-panel .list-item:hover{
+    background: #EFEFEF;
+}
+
+
+.bg{
+    background: rgba(0, 0, 0, 0.85);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    transition: 1s;
+}
+
+.bg .message-wrap{
+    height: 100px;
+    width: 600px;
+    border-radius: 4px;
+    background: #fff;
+    margin-top: 100px;
+    padding: 0 40px;
+    position: relative;
+}
+
+.bg .message-wrap .message{
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.bg .message-wrap .message i{
+    margin: 10px;
+    font-size: 20px;
+    color: #189EFF;
+}
+
+.bg .message-wrap #btnNotifyExit{
+    height: 24px;
+    width: 80px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 14px;
+    background: #1D71AB;
+    color: #fff;
+    border-radius: 4px;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.bg .message-wrap #btnNotifyExit:hover{
+    background: #189EFF;
+}
+
+footer
+{
+    height: 400px;
+    background: #333;
+
+}
+
+@media only screen and (max-width: 768px){
+
+    header #account ul{
+        display: none;
+    }
+
+    header #mainNav #logo{
+        margin-left: 0;
+        margin-right: 20px;
+    }
+
+    header #mainNav #search{
+        width: 300px;
+    }
+
+    header #mainNav nav{
+        display: none;
+    }
+
+    header #mainNav #cart a{
+        width: 50px;
+        margin-right: 0px;
+    }
+
+    footer
+    {
+        height: 200px;
+    }
+}

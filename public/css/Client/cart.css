@@ -1,0 +1,288 @@
+body
+{
+    background: #EFEFEF;
+    padding-top: 150px; 
+}
+
+#content{
+    height: auto;
+    min-height: 80vh;
+}
+
+#category-name
+{
+    font-size: 24px;
+    color: #333;
+    height: 40px;
+    text-align: left;
+    margin: 0 40px;
+}
+
+#noBooksCart
+{
+    background: white;
+    height: 400px;
+    margin: 0 40px 40px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#noBooksCart i
+{
+    font-size: 100px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+#noBooksCart p
+{
+    text-align: center;
+    font-size: 14px;
+    line-height: 40px;
+    margin-top: 20px;
+}
+
+#noBooksCart a
+{
+    margin-top: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    background: red;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    opacity: 0.75;
+    height: 50px;
+    line-height: 50px;
+    width: 250px;
+}
+
+#noBooksCart a:hover
+{
+    opacity: 1;
+}
+
+#mayLike
+{
+    background: white;
+    height: auto;
+    margin: 0 40px 40px 40px;
+    display: block;
+}
+
+#mayLike #suggestBooks
+{    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+
+#booksCart
+{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin: 0 40px 40px 40px;
+}
+
+#booksCart #books a
+{
+    text-decoration: none;
+}
+
+#booksCart #books .bookDetail
+{
+    background: white;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 1fr;
+    height: 120px;
+    margin-bottom: 4px;
+}
+
+#booksCart #books .bookDetail .bookDetailImage
+{
+    height: 120px;
+    width: 120px; 
+}
+
+#booksCart #books .bookDetail .bookDetailImage img
+{
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#booksCart #books .bookDetail .bookDetailInfo .bookName
+{
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 20px;
+    text-overflow: ellipsis;
+}
+
+#booksCart #books .bookDetail .bookDetailInfo .bookName a:hover{
+    color: #189EFF; 
+}
+
+#booksCart #books .bookDetail .bookDetailInfo .bookAuthor
+{
+    color: gray;   
+    font-size: 12px;   
+    margin-top: 10px; 
+}
+
+#booksCart #books .bookDetail .bookDetailInfo .bookAuthor a:hover{
+    color: #189EFF; 
+}
+
+
+#booksCart #books .bookDetail .bookDetailInfo .deleteButton
+{
+    font-size: 12px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#booksCart #books .bookDetail .bookDetailInfo .deleteButton:hover{
+    color: #189EFF;
+}
+
+#booksCart #books .bookDetail .bookDetailPrice
+{
+    text-align: right;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+#booksCart #books .bookDetail .bookDetailPrice .currentPrice
+{
+    font-size: 18px;
+    line-height: 20px;
+}
+
+#booksCart #books .bookDetail .bookDetailPrice .saleOffPrice
+{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+#booksCart #books .bookDetail .bookDetailPrice .saleOffPrice .oldPrice
+{
+    text-decoration-line: line-through;
+    color: gray;
+    font-weight: normal;
+    border-right: 1px solid gray;
+    text-align: right;
+    padding-right: 10px;
+}
+#booksCart #books .bookDetail .bookDetailAmount{
+    display: flex;
+    align-items: center;
+}
+
+#booksCart #books .bookDetail .bookDetailAmount .add-book{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 120px;
+    height: 40px;
+    border: 1px solid #ECECEC;
+    margin-right: 40px;
+    border-radius: 2px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+#booksCart #books .bookDetail .bookDetailAmount .add-book .remove-btn,
+#booksCart #books .bookDetail .bookDetailAmount .add-book .book-number,
+#booksCart #books .bookDetail .bookDetailAmount .add-book .add-btn{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+#booksCart #books .bookDetail .bookDetailAmount .add-book .remove-btn:hover,
+#booksCart #books .bookDetail .bookDetailAmount .add-btn:hover{
+    background: #EFEFEF;
+    transition: .4s;
+    cursor: pointer;
+}
+
+
+#booksCart #payingSection
+{
+    margin-left: 10px;
+}
+
+#booksCart #payingSection #feeSection
+{
+    display: block;
+    height: 150px;
+}
+
+#booksCart #payingSection #feeSection #temporary, #final
+{
+    line-height: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    background: white;
+    margin-bottom: 4px;
+}
+
+#booksCart #payingSection #feeSection #temporary #temporaryValue
+{
+    font-weight: bold;
+    text-align: right;
+}
+
+
+#booksCart #payingSection #feeSection #final #finalValue
+{
+    font-weight: bold;
+    text-align: right;
+    font-size: 20px;
+    color: red;
+}
+
+#booksCart #payingSection #feeSection #final div
+{
+    text-align: right;
+    font-size: 12px;
+    font-weight: 300;
+    color: black;
+    display: block;
+    width: 100%;
+}
+
+#booksCart #payingSection a
+{
+    font-weight: bold;
+    display: inline-block;
+    background: red;
+    color: white;
+    width: 100%;
+    margin-top: 20px;
+    opacity: 0.75;
+    height: 50px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+}
+
+#booksCart #payingSection a:hover
+{
+    opacity: 0.85;
+}

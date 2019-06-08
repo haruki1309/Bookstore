@@ -1,0 +1,59 @@
+.content{
+	height: auto;
+	min-height: 100vh;
+	padding: 120px 40px 0 40px;
+	background: #EFEFEF;
+}
+
+.content .title{
+	font-size: 22px;
+	margin-bottom: 10px;
+}
+.content .order-table{
+	background: #fff;
+}
+.content .order-table table{
+	border-collapse: collapse;
+	width: 100%;
+	
+}
+
+.content .order-table table tr{
+	border-bottom: 1px solid #EFEFEF;
+}	
+
+.content .order-table table th{
+	height: 80px;
+	line-height: 80px;
+	text-align: left;
+	color: #787878;
+	padding-left: 10px;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.content .order-table table .id,
+.content .order-table table .date,
+.content .order-table table .total{
+	width: 100px;
+}
+.content .order-table table .status{
+	width: 200px;
+}
+
+
+.content .order-table table td{
+	height: 60px;
+	line-height: 60px;
+	text-align: left;
+	padding-left: 10px;
+	font-size: 14px;
+}
+
+.content .order-table table .bookname-data{
+	display: block;
+	width: 700px;
+	white-space: nowrap; 
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+}

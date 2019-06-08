@@ -28,6 +28,7 @@ class CreateBooksTable extends Migration
             $table->integer('inventory_number');
             $table->integer('price');
             $table->integer('sale');
+            $table->float('rating');
         });
     }
 

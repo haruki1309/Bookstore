@@ -1,3 +1,18 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+body{
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	height: auto;
+	min-height: 100vh;
+}
+
 .nav{
 	background: #040509;
 	height: 100%;
@@ -6,24 +21,43 @@
 
 .nav .logo{
 	margin-left: 50%;
-	margin-top: 80px;	
+	margin-top: 40px;	
 	transform: translateX(-50%);
 	display: inline-block;
 }
 
-.nav .admin-name{
-	color: #EFDFFF;
-	font-size: 20px;
+.nav .admin-logo{
 	text-align: center;
-	margin-top: 40px;
+	height: 80px;
+	line-height: 80px;
+	margin-top: 20px;
+}
+
+.nav .admin-logo i{
+	font-size: 28px;
+	color: #F6F7F8;
+}
+
+.nav .admin-name{
+	text-align: center;
+}
+
+.nav .admin-name a{
+	text-decoration: none;
+	color: #F6F7F8;
+	font-size: 16px;
+}
+
+.nav .admin-name a:hover{
+	color: #189EFF;
 }
 
 .nav .menu #li-highlight{
-	background: #7F15E9;
+	background: #189EFF;
 }
 
 .nav .menu .parent-list{
-	margin-top: 60px;
+	margin-top: 30px;
 	width: 90%;
 	float: right;
 }
@@ -71,7 +105,7 @@
 	display: block;
 	padding: 14px 20px 14px 60px;
 	border-radius: 36px 0 0 34px;
-	transition: .4s;
+	transition: .1s;
 }
 
 .nav .menu .sub-list a:hover{
@@ -79,5 +113,4 @@
 	padding: 14px 20px 14px 60px;
 	background: #4F546A;
 	border-radius: 36px 0 0 34px;
-	transition: .4s;
 }

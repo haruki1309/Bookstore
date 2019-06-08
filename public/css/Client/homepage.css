@@ -1,0 +1,532 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', serif;
+    font-weight: 300;     
+}
+
+body{
+    background: #EFEFEF;
+}
+
+p
+{
+    color: rgb(65, 64, 64);
+}
+
+ul
+{
+    list-style: none;
+}
+
+ul li
+{
+    float: left;
+    margin-left: 0;
+    margin-right: 50px;
+}
+
+h1, h2
+{
+    color: rgb(65, 64, 64);
+}
+
+a
+{    
+    text-decoration: none;
+    color: rgb(65, 64, 64);
+}
+
+.slider{
+	width: 100%;
+    height: 70vh;
+    margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+    background: #222;
+}
+
+.slider .slide{
+	width: 2000%;
+	height: 100%;
+	margin-left: 0;
+}
+.slider .slide .img-wrap{
+	width: 100vw;
+	height: 100%;
+	float: left;
+}
+
+.slider .slide .img-wrap img{
+	width: 100vw;
+	height: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.slider .prev-btn,
+.slider .next-btn{
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	border-radius: 50px;
+	background: rgb(65, 64, 64);
+	opacity: 0.4;
+	line-height: 50px;
+	text-align: center;
+	text-decoration: none;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.slider .prev-btn:hover,
+.slider .next-btn:hover{
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	border-radius: 50px;
+	background: rgb(65, 64, 64);
+	opacity: 0.5;
+	line-height: 50px;
+	text-align: center;
+	text-decoration: none;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: 0.2s;
+}
+
+.slider .prev-btn,
+.catalog .prev-btn{
+	left: 20px;
+}
+
+.slider .next-btn,
+.catalog .next-btn{
+	right: 20px;
+}
+
+.slider i, .catalog i{
+	font-size: 24px;
+	font-weight: 800px;
+	color: white;
+	line-height: 50px;
+}
+
+#content
+{
+    padding-bottom: 40px;
+}
+
+#bestSeller
+{
+    height: 400px;
+    background: white;
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    margin: 40px;
+    padding: 20px;
+}
+
+#bestSeller #bestSellerImage
+{ 
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-top: 50px;
+}
+
+.book-img-wrap
+{
+    width: 180px;
+    height: auto;
+    margin: auto;
+    padding: 16px;
+}
+
+.book-img-wrap:hover
+{
+    box-shadow: 1px 1px 8px 0px #A8A8A8;
+    transition: .3s;
+}
+
+.book-img-wrap img
+{
+    width: 180px;
+    height: 180px;
+    margin-top: 5px;
+    background-position: center;
+    background-repeat: none;
+}
+
+#bestSeller #bestSellerInfo
+{
+    display: block;
+    padding-top: 90px;
+    margin-left: 30px;
+}
+
+#bestSeller #bestSellerInfo p
+{
+    font-size: 1.2em;
+    margin-top: 10px;
+} 
+
+#bestSeller #bestSellerInfo .btn-seemore
+{
+    margin-top: 30px;
+    height: 40px;
+    width: 120px;
+    font-size: 16px;
+    display: inline-block;
+    border: 1px solid rgb(90, 89, 89);
+    text-align: center;
+    line-height: 40px;
+    transition: .2s;
+}
+
+#bestSeller #bestSellerInfo .btn-seemore:hover{
+    color: #fff;
+    border: 1px solid #fff;
+    background: #1D71AB;
+    transition: .3s;
+}
+
+#saleOff
+{
+    height: auto;
+    margin: 0 40px 0 40px;
+    background: white;
+    padding-bottom: 40px;
+    padding-top: 20px;  
+}
+
+#saleOff h1
+{
+    color: #FF3B26;
+    width: 400px;
+    line-height: 60px;
+    margin: auto;
+    text-align: center;
+    border-bottom: 2px solid #FF3B26;
+    font-weight: 500;
+}
+
+#saleOff #saleOffImage
+{
+    height: auto;
+    width: 80%;
+    height: 500px;
+    margin-top: 20px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#saleOff #saleOffImage a{
+    width: 250px;
+    height: 420px;
+    margin: auto;
+    padding: 0 16px;
+}
+
+#saleOff #saleOffImage .saleOffBook:hover
+{
+    /* width: 250px;
+    height: 350px;
+    margin: auto; */
+    box-shadow: 1px 1px 10px 0px rgb(170, 130, 245);
+    transition: .3s;
+}
+
+#saleOff #saleOffImage .saleOffBook img
+{
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    background-position: center;
+    background-repeat: none;
+}
+
+#saleOff #saleOffImage .saleOffBook .saleOffPercent
+{
+    color: white;
+    width: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    margin: 3px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    background: #FF3B26;
+}
+
+#saleOff #saleOffImage .saleOffBook .bookInfo
+{
+    margin-left: 10px;
+    /* background: aquamarine; */
+    width: 230px;
+}
+
+#saleOff #saleOffImage .saleOffBook .bookInfo .bookName
+{
+    /* font-weight: bold; */
+    color: rgb(65, 64, 64);
+}
+
+#saleOff #saleOffImage .saleOffBook .bookInfo .author
+{
+    font-size: 12px;
+    color: rgb(100, 99, 99);
+}
+
+#saleOff #saleOffImage .saleOffBook .bookInfo .priceInfo
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#saleOff #saleOffImage .saleOffBook .bookInfo .priceInfo .price
+{
+    font-weight: bolder;
+    color: #FF3B26;
+    line-height: 18px;
+}
+
+#saleOff #saleOffImage .saleOffBook .bookInfo .priceInfo .saleOffInfo
+{
+    font-size: 13px;
+    font-weight: bold;
+    color: #FF3B26;
+    line-height: 18px;
+}
+
+#saleOff #saleOffImage .saleOffBook .bookInfo .oldPrice
+{
+    font-size: 13px;
+    text-decoration: line-through;
+    color: rgb(100, 99, 99);
+}
+
+#saleOff .btn-seemore
+{
+    width: 120px;
+    line-height: 35px;
+    color: rgb(65, 64, 64);
+    font-size: 15px;
+    display: inline-block;
+    border: 1px solid rgb(65, 64, 64);
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    transition: .2s;
+}
+
+#saleOff .btn-seemore:hover{
+    color: #fff;
+    border: 1px solid #fff;
+    background: #1D71AB;
+    transition: .3s;
+}
+
+.catalog
+{
+    height: 480px;
+    margin: 40px 40px 0 40px;
+    background: white;
+    padding: 20px;
+}
+
+.catalog h2
+{
+    margin-left: 20px;
+    width: 500px;
+    line-height: 50px;
+    display: inline-block;
+    border-bottom: 2px solid rgb(65, 64, 64);
+}
+
+.catalog .catalogImage .slide-wrap{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.catalog .catalogImage .slide-wrap .slide{
+    width: 2000%;
+    height: 86%;
+    padding: 10px 0; 
+}
+
+.catalog .catalogImage .slide-wrap .slide:after{
+    content: "";
+    display: block;
+    clear: left;
+}
+
+.catalog .catalogImage
+{
+    width: 100%;
+    margin: 20px auto;  
+    display: grid;
+    grid-template-columns: 1fr 15fr 1fr;
+}
+
+.catalog .catalogImage .slide-wrap .book-img-wrap{
+    float: left;
+    height: 100%;
+    width: 185px;
+}
+
+.catalog .catalogImage .prev-btn,
+.catalog .catalogImage .next-btn{
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	border-radius: 50px;
+	background: rgb(65, 64, 64);
+	opacity: 0.4;
+	line-height: 50px;
+	text-align: center;
+	text-decoration: none;
+    margin: auto;
+}
+
+.catalog .catalogImage .prev-btn:hover,
+.catalog .catalogImage .next-btn:hover{
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	border-radius: 50px;
+	background: rgb(65, 64, 64);
+	opacity: 0.6;
+	line-height: 50px;
+	text-align: center;
+	text-decoration: none;
+	margin: auto;
+	transition: 0.2s;
+}
+
+.bookInfo
+{
+    margin-left: 10px;
+    width: 230px;
+}
+
+.bookInfo .bookName
+{
+    /* font-weight: bold; */
+    font-size: 14px;
+    color: rgb(65, 64, 64);
+    margin-top: 6px;
+    width: 70%;
+}
+
+.bookInfo .author
+{
+    font-size: 11px;
+    color: rgb(100, 99, 99);
+    margin-top: 6px;
+}
+
+.bookInfo .priceInfo
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 4px;
+}
+
+.bookInfo .priceInfo .price
+{
+    font-weight: bolder;
+    font-size: 14px;
+    color: #FF3B26;
+    line-height: 18px;
+}
+
+.bookInfo .priceInfo .saleOffInfo
+{
+    font-size: 11px;
+    font-weight: bold;
+    color: #FF3B26;
+    line-height: 18px;
+}
+
+.bookInfo .oldPrice
+{
+    font-size: 11px;
+    text-decoration: line-through;
+    color: rgb(100, 99, 99);
+    margin-top: 4px;
+}
+
+@media only screen and (max-width: 768px){
+    .slider{
+        width: 100%;
+        height: 40vh;
+        margin-top: 80px;
+        position: relative;
+        overflow: hidden;
+        background: #222;
+    }
+
+    #bestSeller
+    {
+        height: auto;
+        background: white;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 10px 0;
+        padding: 0px;
+    }
+
+    #bestSeller #bestSellerInfo{
+        display: none;
+    }
+
+    #bestSeller #bestSellerImage
+    { 
+        background: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 0px;
+    }
+    #saleOff
+    {
+        height: auto;
+        width: 100%;
+        margin: 0px;
+        background: white;
+        padding-bottom: 40px;
+        padding-top: 20px;  
+    }
+    #saleOff #saleOffImage
+    {
+        height: auto;
+        width: 100%;
+        height: 420px;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        background: yellow;
+    }
+    #saleOff #saleOffImage a
+    {
+        width: 120px;
+        height: 100%;
+    }
+
+
+    #saleOff #saleOffImage .saleOffBook img
+    {
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        background-position: center;
+        background-repeat: none;
+    }
+}

@@ -1,0 +1,294 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', serif;
+    font-weight: 300;     
+}
+
+
+.nav{
+	height: 100px;
+	background: #fff;
+	box-shadow: 0 7px 10px 10px #222;
+	z-index: 1000;
+	padding: 0 80px;
+}
+
+.nav::after{
+	content: "";
+	display: block;
+	clear: right;
+}
+
+.nav .logo{
+	display: inline-block;
+	margin-top: 20px;
+}
+
+.nav .phone-wrap{
+	display: grid;
+	grid-template-columns: 4fr 1fr;
+	float: right;
+	height: 60px;
+	width: 220px;
+	margin-top: 20px;
+	border-radius: 60px;
+	border: 1px solid #959595;
+	cursor: pointer;	
+}
+
+.nav .phone-wrap .phone-icon-wrap{ 
+	background: #189EFF;
+	height: 50px;
+	width: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 20px;
+	color: #fff;
+	border-radius: 50px;
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
+.nav .phone-wrap .phone-detail-wrap{
+	text-align: center;
+	display: inline-block;
+	margin-top: 10px;
+}
+
+.nav .phone-wrap .phone-detail-wrap .phone-number{
+	font-style: 16px;
+	font-weight: 700;
+	color: #009900;
+}	
+
+.nav .phone-wrap .phone-detail-wrap .description{
+	font-size: 14px;
+	color: #777;
+	margin-top: 4px;
+}	
+
+.content{
+	background: #EFEFEF;
+	height: auto;
+	min-height: 100vh;
+	padding: 30px 80px;
+}
+
+.content .title{
+	text-transform: uppercase;
+	font-size: 24px;
+	line-height: 40px;
+}
+
+.content .title::after{
+	display: block;
+	content: "";
+	clear: right;
+}
+
+
+.content .title #btnAddNewAddress{
+	text-transform: none;
+	font-size: 15px;
+	display: inline-block;
+	background: #189EFF;
+	width: 140px;
+	height: 40px;
+	border-radius: 4px;
+	line-height: 40px;
+	float: right;
+	color: #fff;
+	cursor: pointer;
+	text-align: center;
+}
+
+.content .form-address-wrap{
+	background: #fff;
+	margin-top: 20px;
+	height: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+.content .form-address-wrap form{
+	opacity: 0;
+}
+
+.content .form-address-wrap form .session-input{
+	margin-bottom: 20px;
+}
+
+.content .form-address-wrap form .session-input::after{
+	display: block;
+	content: "";
+	clear: right;
+}
+
+.content .form-address-wrap form .session-input .input-wrap{
+	display: inline-block;
+	float: right;
+}
+
+.content .form-address-wrap form .session-input .input-wrap .error{
+	display: block;
+	color: red;
+	font-size: 13px;
+	margin-left: 40px;
+}
+
+.content .form-address-wrap form .session-input input,
+.content .form-address-wrap form .session-input textarea{
+	margin-left: 40px;
+	outline: none;
+	display: block;
+}
+
+.content .form-address-wrap form .session-input input:focus,
+.content .form-address-wrap form .session-input textarea:focus{
+	outline: 1px solid #189EFF;
+}
+
+.content .form-address-wrap form .session-input .label{
+	height: 28px;
+	line-height: 28px;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.content .form-address-wrap form .session-input input{
+	width: 300px;
+	height: 28px;
+	padding: 0 10px;
+}
+
+.content .form-address-wrap form .session-input textarea{
+	width: 300px;
+	height: 100px;
+	padding: 10px 11px;
+}
+.content .form-address-wrap form .session-checkbox{
+	margin-bottom: 10px;
+	font-size: 14px;
+	text-align: center;
+}
+
+.content .form-address-wrap form .session-control::after{
+	display: block;
+	content: "";
+	clear: right;
+}
+
+.content .form-address-wrap form .session-control button{
+	width: 120px;
+	height: 40px;
+	margin-left: 22px;
+	float: right;
+	outline: none;
+	border: none;
+	font-size: 14px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.content .form-address-wrap form .session-control #btnUpdate{
+	background: #189EFF;
+	color: #fff;
+}
+
+.content .list-address{
+	height: auto;
+	min-height: 40vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin-top: 10px;
+}
+
+.content .list-address .address-wrap{
+	background: #fff;
+	border: 1px dashed #009900;
+	width: 92%;
+	height: 150px;
+	margin: 10px auto;
+	padding: 10px;
+	border-radius: 4px;
+	display: inline-block;
+}
+
+.content .list-address .address-wrap .name-wrap::after{
+	content: "";
+	display: block;
+	clear: right;
+}
+
+.content .list-address .address-wrap .name-wrap .name{
+	font-weight: 700;
+}
+
+.content .list-address .address-wrap .name-wrap .default{
+	float: right;
+	font-size: 13px;
+	font-weight: 700;
+	color: #009900;
+}	
+
+.content .list-address .address-wrap .address{
+	margin-top: 10px;
+	font-size: 13px;
+	display: inline-block;
+	width: 500px;
+}
+
+.content .list-address .address-wrap .phone{
+	margin-top: 10px;
+	font-size: 13px;
+}
+
+.content .list-address .address-wrap .control-wrap{
+	margin-top: 20px;
+}
+.content .list-address .address-wrap .control-wrap::after{
+	content: "";
+	display: block;
+	clear: right;
+}
+
+.content .list-address .address-wrap .control-wrap #btnAcept{
+	display: inline-block;
+	background: #1BA8FF;
+	width: 240px;
+	text-decoration: none;
+	color: #fff;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 14px;
+	border-radius: 4px;
+	float: left;
+}
+.content .list-address .address-wrap .control-wrap #btnAcept:hover{
+	background: #00B6F0;
+}
+
+.content .list-address .address-wrap .control-wrap #btnEdit,
+.content .list-address .address-wrap .control-wrap #btnDelete{
+	display: inline-block;
+	border: 1px solid #CCCCCC;
+	background: #FDFDFD;
+	width: 100px;
+	color: #3F3333;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 14px;
+	border-radius: 4px;
+	float: left;
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+.footer{
+	height: 400px;
+    background: #333;
+}

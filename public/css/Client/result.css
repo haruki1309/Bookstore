@@ -1,0 +1,120 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background: #EFEFEF;
+	font-family: 'Roboto', serif;
+	font-weight: 300;
+	padding-top: 90px;
+}
+
+
+.content{
+    padding: 40px;
+    height: auto;
+    min-height: 100vh;
+}
+
+#title{
+	color: #414040;
+	font-size: 28px;
+	padding-bottom: 10px;
+}
+
+#result-wrapper{
+	background: #fff;
+	height: auto;
+}
+
+#result-wrapper .grid-book{
+	padding: 40px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#result-wrapper .grid-book a{
+	text-decoration: none;
+	display: inline-block;
+	width: 96%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+#result-wrapper .grid-book .book-wrapper{
+	background: #fff;
+	height: 440px;
+	margin-bottom: 10px;
+}
+
+#result-wrapper .grid-book .book-wrapper:hover{
+	box-shadow: 1px 1px 8px 0px #A8A8A8;
+}
+
+#result-wrapper .grid-book .book-wrapper .sale-percent{
+	height: 24px;
+	display: block;
+	margin: 0 10px 10px 10px;
+	padding-top: 10px;
+}
+#result-wrapper .grid-book .book-wrapper .sale-percent span{
+	height: 24px;
+	line-height: 24px;
+	border-radius: 6px;
+	width: 50px;
+	display: inline-block;
+	background: #FF7B6D;
+	color: #fff;
+	text-align: center;
+	font-weight: 700;
+}
+
+#result-wrapper .grid-book .book-wrapper .img-wrapper{
+	background: #fff;
+}
+
+#result-wrapper .grid-book .book-wrapper .img-wrapper img{
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	display: block;
+	background-position: center;
+    background-repeat: none;
+}
+
+#result-wrapper .grid-book .book-wrapper .info-wrapper{
+	width: 80%;
+	margin: 20px auto;
+}
+
+#result-wrapper .grid-book .book-wrapper .info-wrapper .author{
+	font-size: 13px;
+	margin-top: 10px;
+}
+
+#result-wrapper .grid-book .book-wrapper .info-wrapper .price-wrap{
+	margin-top: 10px;
+	color: #FF0000;
+}
+
+#result-wrapper .grid-book .book-wrapper .info-wrapper .price-wrap .price{
+	font-size: 14px;
+	font-weight: 500;
+	display: inline-block;
+	padding-right: 80px;
+}
+
+#result-wrapper .grid-book .book-wrapper .info-wrapper .price-wrap .percent{
+	font-size: 13px;
+	font-weight: 700;
+	display: inline-block;
+}
+
+#result-wrapper .grid-book .book-wrapper .info-wrapper .old-price{
+	font-size: 14px;
+	font-weight: 500;
+	display: inline-block;
+	text-decoration: line-through;
+	margin-top: 6px;
+}

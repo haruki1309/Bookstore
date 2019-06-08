@@ -81,7 +81,7 @@ body{
 	text-align: center;
 	font-weight: 500;
 	color: #FFFFFF;
-	background: #7F15E9;
+	background: #1D71AB;
 	cursor: pointer;
 }
 
@@ -122,7 +122,7 @@ body{
 }
 
 .content .author-table .author-list td a{
-	color: #7F15E9;
+	color: #1D71AB;
 }
 
 .content .content-wrap .add-author{
@@ -159,7 +159,7 @@ body{
 	text-align: center;
 	font-weight: 500;
 	color: #FFFFFF;
-	background: #7F15E9;
+	background: #1D71AB;
 	cursor: pointer;
 	float: right;
 }

@@ -25,6 +25,10 @@ class Book extends Model
     	return $this->belongsToMany('App\Category');
     }
 
+    public function Order(){
+        return $this->belongsToMany('App\Order')->withPivot('amount', 'price');
+    }
+
     public function Age(){
     	return $this->belongsTo('App\Age');
     }
@@ -44,5 +48,13 @@ class Book extends Model
 
     public function Picture(){
     	return $this->hasMany('App\Picture');
+    }
+
+    public function Comment(){
+        return $this->hasMany('App\Comment');
+    }
+
+    public function QuestionAnswer(){
+        return $this->hasMany('App\QuestionAnswer');
     }
 }
