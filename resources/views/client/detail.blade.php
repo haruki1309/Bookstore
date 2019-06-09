@@ -103,9 +103,9 @@
 				<div class="disable-sell">Sản phẩm tạm hết hàng</div>
 				@endif
 
-				<div class="add-to-like">
+				<!-- <div class="add-to-like">
 					<i class="far fa-heart"></i>
-				</div>
+				</div> -->
 
 			</div>
 		</div>

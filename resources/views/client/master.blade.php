@@ -36,7 +36,7 @@
                     <a class="list-item" href="{{url('account/order-history')}}">Đơn hàng của tôi</a>
                     <a class="list-item" href="{{url('account/edit')}}">Tài khoản của tôi</a>
                     <a class="list-item" href="{{url('account/purcharsed-book')}}">Nhận xét sản phẩm đã mua</a>
-                    <a class="list-item" href="">Sản phẩm yêu thích</a>
+                    <!-- <a class="list-item" href="">Sản phẩm yêu thích</a> -->
                     <a id="btn-logout" class="btn" href="{{url('logout')}}">Đăng Xuất</a>
                     @else
                     <button id="btn-login" class="btn" type="button">Đăng Nhập</button>

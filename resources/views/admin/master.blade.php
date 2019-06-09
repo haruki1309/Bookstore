@@ -58,7 +58,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="{{url('admin/banners')}}" class="btn">
+					<a href="{{url('admin/advertiserment')}}" class="btn">
 						<i class="fas fa-ad"></i><span>BANNER</span>
 					</a>
 				</li>

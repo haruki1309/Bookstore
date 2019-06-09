@@ -182,6 +182,14 @@ Route::group(['prefix'=>'admin', 'middleware'=>'adminLogin'], function(){
 	Route::get('questions', 'Admin\QuestionController@getQuestionList');
 	Route::post('questions/{id}/answer', 'Admin\QuestionController@postAnswer');
 	Route::get('questions/{id}/delete', 'Admin\QuestionController@deleteQuestion');
+
+	//banner route
+	Route::get('advertiserment', 'Admin\AdvController@getIndex');
+	Route::get('advertiserment/create', 'Admin\AdvController@getCreate');
+	Route::post('advertiserment/ajax-search', 'Admin\AdvController@ajaxSearch');
+	Route::post('advertiserment/create', 'Admin\AdvController@postAdvertiserment');
+	Route::get('advertiserment/edit/{id}', 'Admin\AdvController@getEdit');
+	Route::post('advertiserment/edit/{id}', 'Admin\AdvController@postEdit');
 });
 
 

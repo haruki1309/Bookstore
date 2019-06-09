@@ -17,10 +17,13 @@ use App\Topic;
 use App\Category;
 use App\Picture;
 use App\Order;
+use App\Advertiserment;
 
 class HomepageController extends Controller
 {
     public function getIndex(){
+        $advs = Advertiserment::all();
+
     	$saleOffBook = Book::where('sale', '>', 0)->inRandomOrder()->take(3)->get();
 
     	$newBook = Book::orderBy('publishing_year', 'DESC')->take(16)->inRandomOrder()->get();
@@ -33,6 +36,9 @@ class HomepageController extends Controller
     			->orderBy('sales_count', 'desc')
     			->take(4)
     			->get();
+        if(count($bestSellerBooks) == 0){
+            $bestSellerBooks = Book::take(4)->get();
+        }
 
     	$recommendBook = array();
 
@@ -106,6 +112,6 @@ class HomepageController extends Controller
     		}	
     	}
 
-      	return view('client\home', compact('saleOffBook', 'newBook', 'bestSellerBooks', 'recommendBook'));
+      	return view('client\home', compact('saleOffBook', 'newBook', 'bestSellerBooks', 'recommendBook', 'advs'));
     }
 }

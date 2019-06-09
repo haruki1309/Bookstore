@@ -32,7 +32,7 @@
 
 	<div class="add-book-form">
 		<form class="add-form" method="post" enctype="multipart/form-data">
-			<input type="hidden" name="_token" value="{{csrf_token()}}";>
+			<input type="hidden" name="_token" value="{{csrf_token()}}">
 
 			<div class="data-input">
 				<label class="name">TÊN SÁCH</label>

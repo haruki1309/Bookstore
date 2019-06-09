@@ -29,6 +29,10 @@ class Book extends Model
         return $this->belongsToMany('App\Order')->withPivot('amount', 'price');
     }
 
+    public function Advertiserment(){
+        return $this->belongsToMany('App\Advertiserment');
+    }
+
     public function Age(){
     	return $this->belongsTo('App\Age');
     }

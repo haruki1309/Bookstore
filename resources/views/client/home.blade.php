@@ -6,23 +6,16 @@
 
 @section('content')
 <link rel="stylesheet" href="{{asset('css/client/homepage.css')}}">
+<script type="text/javascript" src="{{asset('js/client/slider.js')}}"></script>
 <div class="slider">
     <div class="slide">
-        <a href="">
+        @foreach($advs as $adv)
+        <a href="{{url('advertiserment/'.$adv->id)}}">
             <div class="img-wrap">
-                <img src="" alt="">
+                <img src="{!!url('1234_db_img/advertiserment/'.$adv->image_link)!!}" alt="adv-banner">
             </div>
         </a>
-        <a href="">
-            <div class="img-wrap">
-                <img src="" alt="">
-            </div>
-        </a>
-        <a href="">
-            <div class="img-wrap">
-                <img src="" alt="">
-            </div>
-        </a>
+        @endforeach
     </div>
 
     <div class="next-btn"><i class="fas fa-chevron-right"></i></div>
