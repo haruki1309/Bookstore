@@ -24,12 +24,12 @@
 
 		<div class="menu">
 			<ul class="parent-list">
-				<li class="parent-item">
+				<!-- <li class="parent-item">
 					<a href="" class="btn">
 						<i class="fas fa-tachometer-alt"></i><span>DASHBOARD</span>
 					</a>
 					
-				</li>
+				</li> -->
 
 				<li class="parent-item">
 					<a href="{{url('admin/books')}}" class="btn">

@@ -19,6 +19,10 @@ Route::group(['prefix'=>'admin', 'middleware'=>'adminLogin'], function(){
 	Route::get('logout', 'Admin\AdminLoginController@logout');
 	//book route ------------------------------------------------------
 
+	Route::get('/', function(){
+		return redirect('admin/books');
+	});
+
 	Route::post('book-search', 'Admin\BookController@search');
 
 	Route::get('book-search', 'Admin\BookController@getSearch');

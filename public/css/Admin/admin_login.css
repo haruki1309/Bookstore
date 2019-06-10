@@ -1,8 +1,14 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
 #background-color {
   height: 100%;
   background-color: #E5E5E5;
   border: 1px solid #cacaca;
 }
+
 form {
   box-sizing: border-box;
   width: 460px;
@@ -53,7 +59,7 @@ input:focus, input:valid {
   background-position: 0 0;
 }
 input:focus::-moz-input-placeholder, input:valid::-moz-input-placeholder {
-  color: #7F15E9;
+  color: #1D71AB;
   font-size: 11px;
   transform: translateY(-20px);
   visibility: visible !important;
@@ -62,7 +68,7 @@ input:focus::-moz-input-placeholder, input:valid::-moz-input-placeholder {
 button {
   border: none;
   font-size: 16;
-  background: #7F15E9;
+  background: #1D71AB;
   cursor: pointer;
   border-radius: 3px;
   padding: 10px;

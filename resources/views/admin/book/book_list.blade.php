@@ -28,7 +28,6 @@
 					<th style="width: 100px;">ĐÃ ĐẶT</th>
 					<th style="width: 100px;">CÒN LẠI</th>
 					<th style="width: 50px;"></th>
-					<th style="width: 50px;"></th>
 				</tr>
 
 				@foreach($allBook as $book)
@@ -46,11 +45,6 @@
 						<td>
 							<a href="books/edit/{{$book->id}}">
 								<i class="fas fa-edit"></i>
-							</a>
-						</td>
-						<td>
-							<a href="books/edit/{{$book->id}}">
-								<i class="fas fa-power-off"></i>
 							</a>
 						</td>
 					</tr>
