@@ -65,3 +65,15 @@
 	text-align: center;
 	text-decoration: none;
 }
+
+.content .table-adv-wrap table .btnEdit{
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	width: 50px;
+	color: #fff;
+	background: #FE302E;
+	border-radius: 4px;
+	text-align: center;
+	text-decoration: none;
+}

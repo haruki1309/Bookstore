@@ -157,4 +157,11 @@ class AdvController extends Controller
         }
 
     }
+    public function getDelete($id){
+        $adv = Advertiserment::where('id', $id)->first();
+
+        //$adv->delete();
+
+        return redirect()->back();
+    }
 }

@@ -194,6 +194,7 @@ Route::group(['prefix'=>'admin', 'middleware'=>'adminLogin'], function(){
 	Route::post('advertiserment/create', 'Admin\AdvController@postAdvertiserment');
 	Route::get('advertiserment/edit/{id}', 'Admin\AdvController@getEdit');
 	Route::post('advertiserment/edit/{id}', 'Admin\AdvController@postEdit');
+	Route::get('advertiserment/delete/{id}', 'Admin\AdvController@getdelete');
 });
 
 
